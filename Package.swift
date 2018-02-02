@@ -14,9 +14,7 @@ let package = Package(
     targets: [
         .target(
             name: "MultiPeer",
-            dependencies: []),
-        .testTarget(
-            name: "MultiPeerTests",
-            dependencies: ["MultiPeer"])
+            dependencies: [],
+            path: "Sources")
     ]
 )
