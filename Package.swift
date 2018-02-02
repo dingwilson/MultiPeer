@@ -3,4 +3,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "MultiPeer")
+    name: "MultiPeer",
+    products: [
+        .library(
+            name: "MultiPeer",
+            targets: ["MultiPeer"])
+    ],
+    dependencies: [
+    ],
+    targets: [
+        .target(
+            name: "MultiPeer",
+            dependencies: []),
+        .testTarget(
+            name: "MultiPeerTests",
+            dependencies: ["MultiPeer"])
+    ]
+)
