@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Volumes/ExtDrive/programming_storage/MultiPeer/Sources/MultiPeer/MultiPeer.h">
+   </FileRef>
+   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>
