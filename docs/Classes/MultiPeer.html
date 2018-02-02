@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MultiPeer Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/MultiPeer" class="dashAnchor"></a>
+    <a title="MultiPeer Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">MultiPeer Docs</a> (55% documented)</p>
+        <p class="header-right"><a href="https://github.com/dingwilson/MultiPeer"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">MultiPeer Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        MultiPeer Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MultiPeer.html">MultiPeer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Peer.html">Peer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/MultiPeerDelegate.html">MultiPeerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>MultiPeer</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MultiPeer</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC8instanceABvZ"></a>
+                    <a name="//apple_ref/swift/Variable/instance" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC8instanceABvZ">instance</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">instance</span> <span class="o">=</span> <span class="nf">MultiPeer</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC8delegateAA0aB8Delegate_pSgXwv"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC8delegateAA0aB8Delegate_pSgXwv">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Conforms to MultiPeerDelegate: Handles receiving data and changes in connections</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MultiPeerDelegate.html">MultiPeerDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC11serviceTypeSQySSGv"></a>
+                    <a name="//apple_ref/swift/Property/serviceType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC11serviceTypeSQySSGv">serviceType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Name of MultiPeer session: Up to one hyphen (-) and 15 characters</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">serviceType</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC06deviceB2IDSQySo06MCPeerD0CGv"></a>
+                    <a name="//apple_ref/swift/Property/devicePeerID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC06deviceB2IDSQySo06MCPeerD0CGv">devicePeerID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Device&rsquo;s name</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">devicePeerID</span><span class="p">:</span> <span class="kt">MCPeerID</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC17serviceAdvertiserSQySo015MCNearbyServiceD0CGv"></a>
+                    <a name="//apple_ref/swift/Property/serviceAdvertiser" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC17serviceAdvertiserSQySo015MCNearbyServiceD0CGv">serviceAdvertiser</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Advertises session</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">serviceAdvertiser</span><span class="p">:</span> <span class="kt">MCNearbyServiceAdvertiser</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC14serviceBrowserSQySo015MCNearbyServiceD0CGv"></a>
+                    <a name="//apple_ref/swift/Property/serviceBrowser" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC14serviceBrowserSQySo015MCNearbyServiceD0CGv">serviceBrowser</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Browses for sessions</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">serviceBrowser</span><span class="p">:</span> <span class="kt">MCNearbyServiceBrowser</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC17connectionTimeoutSdv"></a>
+                    <a name="//apple_ref/swift/Property/connectionTimeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC17connectionTimeoutSdv">connectionTimeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Amount of time to spend connecting before timeout</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">connectionTimeout</span> <span class="o">=</span> <span class="mf">10.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC14availablePeersSayAA0B0CGv"></a>
+                    <a name="//apple_ref/swift/Property/availablePeers" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC14availablePeersSayAA0B0CGv">availablePeers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Peers available to connect to</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">availablePeers</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/Peer.html">Peer</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC14connectedPeersSayAA0B0CGv"></a>
+                    <a name="//apple_ref/swift/Property/connectedPeers" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC14connectedPeersSayAA0B0CGv">connectedPeers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Peers connected to</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">connectedPeers</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/Peer.html">Peer</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC20connectedDeviceNamesSaySSGv"></a>
+                    <a name="//apple_ref/swift/Property/connectedDeviceNames" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC20connectedDeviceNamesSaySSGv">connectedDeviceNames</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Names of all connected devices</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">connectedDeviceNames</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC9debugModeSbv"></a>
+                    <a name="//apple_ref/swift/Property/debugMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC9debugModeSbv">debugMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Prints out all errors and status updates</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">debugMode</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC7sessionSo9MCSessionCv"></a>
+                    <a name="//apple_ref/swift/Property/session" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC7sessionSo9MCSessionCv">session</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Main session object that manages the current connections</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">lazy</span> <span class="k">var</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">MCSession</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializers"></a>
+                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
+                <a href="#/Initializers">
+                  <h3 class="section-name">Initializers</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC10initializeySS11serviceType_tF"></a>
+                    <a name="//apple_ref/swift/Method/initialize(serviceType:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC10initializeySS11serviceType_tF">initialize(serviceType:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes the MultiPeer service with a serviceType and the default deviceName</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">initialize</span><span class="p">(</span><span class="nv">serviceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>serviceType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String with name of MultiPeer service. Up to one hyphen (-) and 15 characters.
+Uses default device name</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC10initializeySS11serviceType_SS10deviceNametF"></a>
+                    <a name="//apple_ref/swift/Method/initialize(serviceType:deviceName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC10initializeySS11serviceType_SS10deviceNametF">initialize(serviceType:deviceName:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes the MultiPeer service with a serviceType and a custom deviceName</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">initialize</span><span class="p">(</span><span class="nv">serviceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">deviceName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>serviceType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String with name of MultiPeer service. Up to one hyphen (-) and 15 characters.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>deviceName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String containing custom name for device</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@MultiPeer@objc(cs)MultiPeer(im)dealloc"></a>
+                    <a name="//apple_ref/swift/Method/deinit" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@MultiPeer@objc(cs)MultiPeer(im)dealloc">deinit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">deinit</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Methods"></a>
+                <a name="//apple_ref/swift/Section/Methods" class="dashAnchor"></a>
+                <a href="#/Methods">
+                  <h3 class="section-name">Methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC13startInvitingyyF"></a>
+                    <a name="//apple_ref/swift/Method/startInviting()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC13startInvitingyyF">startInviting()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>HOST: Automatically browses and invites all found devices</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startInviting</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC14startAcceptingyyF"></a>
+                    <a name="//apple_ref/swift/Method/startAccepting()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC14startAcceptingyyF">startAccepting()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>JOIN: Automatically advertises and accepts all invites</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startAccepting</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC11autoConnectyyF"></a>
+                    <a name="//apple_ref/swift/Method/autoConnect()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC11autoConnectyyF">autoConnect()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>HOST and JOIN: Uses both advertising and browsing to connect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">autoConnect</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC12stopInvitingyyF"></a>
+                    <a name="//apple_ref/swift/Method/stopInviting()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC12stopInvitingyyF">stopInviting()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stops the invitation process</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopInviting</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC13stopAcceptingyyF"></a>
+                    <a name="//apple_ref/swift/Method/stopAccepting()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC13stopAcceptingyyF">stopAccepting()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stops accepting invites and becomes invisible on the network</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopAccepting</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC13stopSearchingyyF"></a>
+                    <a name="//apple_ref/swift/Method/stopSearching()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC13stopSearchingyyF">stopSearching()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stops all invite/accept services</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopSearching</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC10disconnectyyF"></a>
+                    <a name="//apple_ref/swift/Method/disconnect()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC10disconnectyyF">disconnect()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Disconnects from the current session and stops all searching activity</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disconnect</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC3endyyF"></a>
+                    <a name="//apple_ref/swift/Method/end()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC3endyyF">end()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stops all invite/accept services, disconnects from the current session, and stops all searching activity</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">end</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC11isConnectedSbv"></a>
+                    <a name="//apple_ref/swift/Property/isConnected" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC11isConnectedSbv">isConnected</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isConnected</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC4sendyyp6object_s6UInt32V4typetF"></a>
+                    <a name="//apple_ref/swift/Method/send(object:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC4sendyyp6object_s6UInt32V4typetF">send(object:type:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sends an object (and type) to all connected peers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Object (Any) to send to all connected peers.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Type of data (UInt32) sent
+After sending the object, you can use the extension for Data, <code>convertData()</code> to convert it back into an object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MultiPeerAAC4sendy10Foundation4DataV4data_s6UInt32V4typetF"></a>
+                    <a name="//apple_ref/swift/Method/send(data:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeerAAC4sendy10Foundation4DataV4data_s6UInt32V4typetF">send(data:type:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sends Data (and type) to all connected peers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Data (Data) to send to all connected peers.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Type of data (UInt32) sent
+After sending the data, you can use the extension for Data, <code>convertData()</code> to convert it back into data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@MultiPeer@objc(cs)MultiPeer(im)advertiser:didReceiveInvitationFromPeer:withContext:invitationHandler:"></a>
+                    <a name="//apple_ref/swift/Method/advertiser(_:didReceiveInvitationFromPeer:withContext:invitationHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@MultiPeer@objc(cs)MultiPeer(im)advertiser:didReceiveInvitationFromPeer:withContext:invitationHandler:">advertiser(_:didReceiveInvitationFromPeer:withContext:invitationHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">advertiser</span><span class="p">(</span><span class="n">_</span> <span class="nv">advertiser</span><span class="p">:</span> <span class="kt">MCNearbyServiceAdvertiser</span><span class="p">,</span> <span class="n">didReceiveInvitationFromPeer</span> <span class="nv">peerID</span><span class="p">:</span> <span class="kt">MCPeerID</span><span class="p">,</span> <span class="n">withContext</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span> <span class="nv">invitationHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt">MCSession</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@MultiPeer@objc(cs)MultiPeer(im)advertiser:didNotStartAdvertisingPeer:"></a>
+                    <a name="//apple_ref/swift/Method/advertiser(_:didNotStartAdvertisingPeer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@MultiPeer@objc(cs)MultiPeer(im)advertiser:didNotStartAdvertisingPeer:">advertiser(_:didNotStartAdvertisingPeer:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">advertiser</span><span class="p">(</span><span class="n">_</span> <span class="nv">advertiser</span><span class="p">:</span> <span class="kt">MCNearbyServiceAdvertiser</span><span class="p">,</span> <span class="n">didNotStartAdvertisingPeer</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@MultiPeer@objc(cs)MultiPeer(im)browser:foundPeer:withDiscoveryInfo:"></a>
+                    <a name="//apple_ref/swift/Method/browser(_:foundPeer:withDiscoveryInfo:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@MultiPeer@objc(cs)MultiPeer(im)browser:foundPeer:withDiscoveryInfo:">browser(_:foundPeer:withDiscoveryInfo:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">browser</span><span class="p">(</span><span class="n">_</span> <span class="nv">browser</span><span class="p">:</span> <span class="kt">MCNearbyServiceBrowser</span><span class="p">,</span> <span class="n">foundPeer</span> <span class="nv">peerID</span><span class="p">:</span> <span class="kt">MCPeerID</span><span class="p">,</span> <span class="n">withDiscoveryInfo</span> <span class="nv">info</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@MultiPeer@objc(cs)MultiPeer(im)browser:lostPeer:"></a>
+                    <a name="//apple_ref/swift/Method/browser(_:lostPeer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@MultiPeer@objc(cs)MultiPeer(im)browser:lostPeer:">browser(_:lostPeer:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">browser</span><span class="p">(</span><span class="n">_</span> <span class="nv">browser</span><span class="p">:</span> <span class="kt">MCNearbyServiceBrowser</span><span class="p">,</span> <span class="n">lostPeer</span> <span class="nv">peerID</span><span class="p">:</span> <span class="kt">MCPeerID</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@MultiPeer@objc(cs)MultiPeer(im)browser:didNotStartBrowsingForPeers:"></a>
+                    <a name="//apple_ref/swift/Method/browser(_:didNotStartBrowsingForPeers:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@MultiPeer@objc(cs)MultiPeer(im)browser:didNotStartBrowsingForPeers:">browser(_:didNotStartBrowsingForPeers:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">browser</span><span class="p">(</span><span class="n">_</span> <span class="nv">browser</span><span class="p">:</span> <span class="kt">MCNearbyServiceBrowser</span><span class="p">,</span> <span class="n">didNotStartBrowsingForPeers</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@MultiPeer@objc(cs)MultiPeer(im)session:peer:didChangeState:"></a>
+                    <a name="//apple_ref/swift/Method/session(_:peer:didChange:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@MultiPeer@objc(cs)MultiPeer(im)session:peer:didChangeState:">session(_:peer:didChange:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">MCSession</span><span class="p">,</span> <span class="n">peer</span> <span class="nv">peerID</span><span class="p">:</span> <span class="kt">MCPeerID</span><span class="p">,</span> <span class="n">didChange</span> <span class="nv">state</span><span class="p">:</span> <span class="kt">MCSessionState</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@MultiPeer@objc(cs)MultiPeer(im)session:didReceiveData:fromPeer:"></a>
+                    <a name="//apple_ref/swift/Method/session(_:didReceive:fromPeer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@MultiPeer@objc(cs)MultiPeer(im)session:didReceiveData:fromPeer:">session(_:didReceive:fromPeer:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">MCSession</span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="n">fromPeer</span> <span class="nv">peerID</span><span class="p">:</span> <span class="kt">MCPeerID</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@MultiPeer@objc(cs)MultiPeer(im)session:didReceiveStream:withName:fromPeer:"></a>
+                    <a name="//apple_ref/swift/Method/session(_:didReceive:withName:fromPeer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@MultiPeer@objc(cs)MultiPeer(im)session:didReceiveStream:withName:fromPeer:">session(_:didReceive:withName:fromPeer:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">MCSession</span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">stream</span><span class="p">:</span> <span class="kt">InputStream</span><span class="p">,</span> <span class="n">withName</span> <span class="nv">streamName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">fromPeer</span> <span class="nv">peerID</span><span class="p">:</span> <span class="kt">MCPeerID</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@MultiPeer@objc(cs)MultiPeer(im)session:didStartReceivingResourceWithName:fromPeer:withProgress:"></a>
+                    <a name="//apple_ref/swift/Method/session(_:didStartReceivingResourceWithName:fromPeer:with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@MultiPeer@objc(cs)MultiPeer(im)session:didStartReceivingResourceWithName:fromPeer:withProgress:">session(_:didStartReceivingResourceWithName:fromPeer:with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">MCSession</span><span class="p">,</span> <span class="n">didStartReceivingResourceWithName</span> <span class="nv">resourceName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">fromPeer</span> <span class="nv">peerID</span><span class="p">:</span> <span class="kt">MCPeerID</span><span class="p">,</span> <span class="n">with</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">Progress</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@MultiPeer@objc(cs)MultiPeer(im)session:didFinishReceivingResourceWithName:fromPeer:atURL:withError:"></a>
+                    <a name="//apple_ref/swift/Method/session(_:didFinishReceivingResourceWithName:fromPeer:at:withError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@MultiPeer@objc(cs)MultiPeer(im)session:didFinishReceivingResourceWithName:fromPeer:atURL:withError:">session(_:didFinishReceivingResourceWithName:fromPeer:at:withError:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">MCSession</span><span class="p">,</span> <span class="n">didFinishReceivingResourceWithName</span> <span class="nv">resourceName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">fromPeer</span> <span class="nv">peerID</span><span class="p">:</span> <span class="kt">MCPeerID</span><span class="p">,</span> <span class="n">at</span> <span class="nv">localURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">withError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-02-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

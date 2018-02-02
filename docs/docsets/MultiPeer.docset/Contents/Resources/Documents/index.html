@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MultiPeer  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="MultiPeer  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">MultiPeer Docs</a> (55% documented)</p>
+        <p class="header-right"><a href="https://github.com/dingwilson/MultiPeer"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">MultiPeer Reference</a>
+        <img id="carat" src="img/carat.png" />
+        MultiPeer  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/MultiPeer.html">MultiPeer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Peer.html">Peer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Data.html">Data</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/MultiPeerDelegate.html">MultiPeerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <p align="center">
+  <img src="Assets/banner.png" title="MultiPeer">
+</p>
+
+<p><a href="https://travis-ci.org/dingwilson/MultiPeer"><img src="https://travis-ci.org/dingwilson/MultiPeer.svg?branch=master" alt="Build Status"></a>
+<a href="https://cocoapods.org/pods/MultiPeer"><img src="https://img.shields.io/cocoapods/v/MultiPeer.svg" alt="CocoaPods Version Status"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://cocoapods.org/pods/MultiPeer"><img src="https://img.shields.io/cocoapods/dt/MultiPeer.svg" alt="CocoaPods"></a>
+<a href="https://cocoapods.org/pods/MultiPeer"><img src="https://img.shields.io/cocoapods/dm/MultiPeer.svg" alt="CocoaPods"></a>
+<img src="https://img.shields.io/badge/os-iOS-green.svg?style=flat" alt="iOS">
+<img src="https://img.shields.io/badge/os-Mac-green.svg?style=flat" alt="Mac">
+<a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-4.0-orange.svg" alt="Swift"></a>
+<a href="http://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a></p>
+
+<p>A wrapper for Apple&rsquo;s MultipeerConnectivity framework for offline data transmission between Apple devices. This framework makes it easy to automatically connect to multiple nearby devices and share information using either bluetooth or wifi radios.</p>
+
+<ol>
+<li><a href="#features">Features</a></li>
+<li><a href="#integration">Integration</a>
+
+<ul>
+<li><a href="#cocoapods">CocoaPods</a></li>
+<li><a href="#carthage">Carthage</a></li>
+<li><a href="#swift-package-manager">Swift Package Manager</a></li>
+</ul></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#authors">Authors</a></li>
+</ol>
+<h2 id='features' class='heading'>Features</h2>
+
+<ul>
+<li>[x] Auto Connection</li>
+<li>[x] Auto Invitations/Advertising</li>
+<li>[x] Send/Receive data</li>
+<li>[ ] Send/Receive video buffers</li>
+</ul>
+<h2 id='integration' class='heading'>Integration</h2>
+<h4 id='cocoapods' class='heading'>CocoaPods</h4>
+
+<p>You can use <a href="http://cocoapods.org/">CocoaPods</a> to install <code><a href="Classes/MultiPeer.html">MultiPeer</a></code> by adding it to your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code>    <span class="n">pod</span> <span class="s1">'MultiPeer'</span>
+</code></pre>
+<h4 id='carthage' class='heading'>Carthage</h4>
+
+<p>You can use <a href="https://github.com/Carthage/Carthage">Carthage</a> to install <code><a href="Classes/MultiPeer.html">MultiPeer</a></code> by adding it to your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "dingwilson/MultiPeer"
+</code></pre>
+<h4 id='swift-package-manager' class='heading'>Swift Package Manager</h4>
+
+<p>For <a href="https://swift.org/package-manager/">SPM</a>, add the following to your package dependencies:</p>
+<pre class="highlight plaintext"><code>.package(url: "https://github.com/dingwilson/MultiPeer.git", .upToNextMinor(from: "0.0.0"))
+</code></pre>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>To get started, simply initialize MultiPeer with the name of your session (<code>serviceType</code>). There are two modes of connections (advertiser and browser). To utilize both, simply use <code>.autoConnect()</code>.</p>
+<pre class="highlight swift"><code><span class="kt">MultiPeer</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="nf">initialize</span><span class="p">(</span><span class="nv">serviceType</span><span class="p">:</span> <span class="s">"demo-app"</span><span class="p">)</span>
+<span class="kt">MultiPeer</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="nf">autoConnect</span><span class="p">()</span>
+</code></pre>
+
+<p>Any data transmitted by MultiPeer will always be accompanied by a numerical <q>type</q>, to ensure other peers know what kind of data is being received. You can manage this by creating a <code>UInt32</code> enum, as shown below:</p>
+<pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">DataType</span><span class="p">:</span> <span class="nf">UInt32</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">string</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">case</span> <span class="n">image</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>To send data, simply use the <code>.send(object: type:)</code> function:</p>
+<pre class="highlight swift"><code><span class="kt">MultiPeer</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="s">"Hello World!"</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">DataType</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="n">rawValue</span><span class="p">)</span>
+</code></pre>
+
+<p>To receive data, we must conform to the <code><a href="Protocols/MultiPeerDelegate.html">MultiPeerDelegate</a></code> protocol:</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">multiPeer</span><span class="p">(</span><span class="n">didReceiveData</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="n">ofType</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="n">type</span> <span class="o">==</span> <span class="kt">DataType</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="nf">rawValue</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">string</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="nf">convert</span><span class="p">()</span> <span class="k">as!</span> <span class="kt">String</span>
+        <span class="c1">// do something with the received string</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">type</span> <span class="o">==</span> <span class="kt">DataType</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="nf">rawValue</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="nf">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
+        <span class="c1">// do something with the received UIImage</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">multiPeer</span><span class="p">(</span><span class="n">connectedDevicesChanged</span> <span class="nv">devices</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span> <span class="p">{}</span>
+</code></pre>
+
+<p>Congratulations! You have successfully sent data using MultiPeer! For more detailed information (including details of other functions), please see the <a href="http://wilsonding.com/MultiPeer">docs</a>.</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p><code><a href="Classes/MultiPeer.html">MultiPeer</a></code> is released under an <a href="http://opensource.org/licenses/MIT">MIT License</a>. See <a href="LICENSE">LICENSE</a> for details.</p>
+<h2 id='authors' class='heading'>Authors</h2>
+
+<ul>
+<li><a href="https://github.com/dingwilson">Wilson Ding</a></li>
+<li><a href="https://github.com/quanvo87">Quan Vo</a></li>
+</ul>
+
+<p>Project heavily inspired by <a href="https://github.com/kirankunigiri/Apple-Signal">Apple-Signal</a>.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-02-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,5 @@
+module: MultiPeer
+github_url: https://github.com/dingwilson/MultiPeer
+
+clean: true
+xcodebuild_arguments: [-scheme,MultiPeer-Package]
