@@ -36,7 +36,7 @@ A wrapper for Apple's MultipeerConnectivity framework for offline data transmiss
 You can use [CocoaPods](http://cocoapods.org/) to install `MultiPeer` by adding it to your `Podfile`:
 
 ```ruby
-	pod 'MultiPeer'
+pod 'MultiPeer'
 ```
 
 #### Carthage
