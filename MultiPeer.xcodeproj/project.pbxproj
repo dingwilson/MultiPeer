@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C813FC0F2024D9A400C92C34 /* MultiPeer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C813FC052024D9A400C92C34 /* MultiPeer.framework */; };
 		C813FC162024D9A400C92C34 /* MultiPeer.h in Headers */ = {isa = PBXBuildFile; fileRef = C813FC082024D9A400C92C34 /* MultiPeer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C813FC2B2024D9EA00C92C34 /* MultiPeer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C813FC222024D9E900C92C34 /* MultiPeer.framework */; };
 		C813FC482024DC6C00C92C34 /* MultiPeer.h in Headers */ = {isa = PBXBuildFile; fileRef = C813FC082024D9A400C92C34 /* MultiPeer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C82A45C52024DD2F00712C7A /* MultiPeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A45C22024DD2E00712C7A /* MultiPeer.swift */; };
 		C82A45C62024DD2F00712C7A /* MultiPeerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A45C32024DD2E00712C7A /* MultiPeerDelegate.swift */; };
@@ -17,41 +15,17 @@
 		C82A45C82024DD3200712C7A /* MultiPeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A45C22024DD2E00712C7A /* MultiPeer.swift */; };
 		C82A45C92024DD3200712C7A /* MultiPeerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A45C32024DD2E00712C7A /* MultiPeerDelegate.swift */; };
 		C82A45CA2024DD3200712C7A /* Peer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A45C42024DD2E00712C7A /* Peer.swift */; };
-		C82A45CD2024DE2D00712C7A /* MultiPeerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A45CB2024DD9B00712C7A /* MultiPeerTests.swift */; };
-		C82A45CE2024DE2E00712C7A /* MultiPeerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A45CB2024DD9B00712C7A /* MultiPeerTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C813FC102024D9A400C92C34 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C813FBFA2024D97C00C92C34 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C813FC042024D9A400C92C34;
-			remoteInfo = "MultiPeer iOS";
-		};
-		C813FC2C2024D9EA00C92C34 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C813FBFA2024D97C00C92C34 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C813FC212024D9E900C92C34;
-			remoteInfo = "MultiPeer macOS";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C813FC052024D9A400C92C34 /* MultiPeer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiPeer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C813FC082024D9A400C92C34 /* MultiPeer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiPeer.h; sourceTree = "<group>"; };
-		C813FC0E2024D9A400C92C34 /* MultiPeer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiPeer.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C813FC152024D9A400C92C34 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		C813FC222024D9E900C92C34 /* MultiPeer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiPeer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C813FC2A2024D9EA00C92C34 /* MultiPeer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiPeer.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C813FC312024D9EA00C92C34 /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
 		C813FC422024DAAA00C92C34 /* Info-macOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
 		C813FC432024DAAA00C92C34 /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		C82A45C22024DD2E00712C7A /* MultiPeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPeer.swift; sourceTree = "<group>"; };
 		C82A45C32024DD2E00712C7A /* MultiPeerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPeerDelegate.swift; sourceTree = "<group>"; };
 		C82A45C42024DD2E00712C7A /* Peer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peer.swift; sourceTree = "<group>"; };
-		C82A45CB2024DD9B00712C7A /* MultiPeerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPeerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,26 +36,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C813FC0B2024D9A400C92C34 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C813FC0F2024D9A400C92C34 /* MultiPeer.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C813FC1E2024D9E900C92C34 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C813FC272024D9EA00C92C34 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C813FC2B2024D9EA00C92C34 /* MultiPeer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				C813FC3C2024DA4400C92C34 /* Sources */,
-				C813FC462024DB9100C92C34 /* Tests */,
 				C813FC062024D9A400C92C34 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,9 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				C813FC052024D9A400C92C34 /* MultiPeer.framework */,
-				C813FC0E2024D9A400C92C34 /* MultiPeer.xctest */,
 				C813FC222024D9E900C92C34 /* MultiPeer.framework */,
-				C813FC2A2024D9EA00C92C34 /* MultiPeer.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,24 +80,6 @@
 			children = (
 				C813FC432024DAAA00C92C34 /* Info-iOS.plist */,
 				C813FC422024DAAA00C92C34 /* Info-macOS.plist */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C813FC462024DB9100C92C34 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				C82A45CB2024DD9B00712C7A /* MultiPeerTests.swift */,
-				C813FC472024DB9A00C92C34 /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		C813FC472024DB9A00C92C34 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C813FC152024D9A400C92C34 /* Info-iOS.plist */,
-				C813FC312024D9EA00C92C34 /* Info-macOS.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -187,24 +124,6 @@
 			productReference = C813FC052024D9A400C92C34 /* MultiPeer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C813FC0D2024D9A400C92C34 /* MultiPeer iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C813FC1A2024D9A400C92C34 /* Build configuration list for PBXNativeTarget "MultiPeer iOSTests" */;
-			buildPhases = (
-				C813FC0A2024D9A400C92C34 /* Sources */,
-				C813FC0B2024D9A400C92C34 /* Frameworks */,
-				C813FC0C2024D9A400C92C34 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C813FC112024D9A400C92C34 /* PBXTargetDependency */,
-			);
-			name = "MultiPeer iOSTests";
-			productName = "MultiPeer iOSTests";
-			productReference = C813FC0E2024D9A400C92C34 /* MultiPeer.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		C813FC212024D9E900C92C34 /* MultiPeer macOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C813FC332024D9EA00C92C34 /* Build configuration list for PBXNativeTarget "MultiPeer macOS" */;
@@ -223,24 +142,6 @@
 			productReference = C813FC222024D9E900C92C34 /* MultiPeer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C813FC292024D9EA00C92C34 /* MultiPeer macOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C813FC362024D9EA00C92C34 /* Build configuration list for PBXNativeTarget "MultiPeer macOSTests" */;
-			buildPhases = (
-				C813FC262024D9EA00C92C34 /* Sources */,
-				C813FC272024D9EA00C92C34 /* Frameworks */,
-				C813FC282024D9EA00C92C34 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C813FC2D2024D9EA00C92C34 /* PBXTargetDependency */,
-			);
-			name = "MultiPeer macOSTests";
-			productName = "MultiPeer macOSTests";
-			productReference = C813FC2A2024D9EA00C92C34 /* MultiPeer.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -255,15 +156,7 @@
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
-					C813FC0D2024D9A400C92C34 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
 					C813FC212024D9E900C92C34 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
-					C813FC292024D9EA00C92C34 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -282,9 +175,7 @@
 			projectRoot = "";
 			targets = (
 				C813FC042024D9A400C92C34 /* MultiPeer iOS */,
-				C813FC0D2024D9A400C92C34 /* MultiPeer iOSTests */,
 				C813FC212024D9E900C92C34 /* MultiPeer macOS */,
-				C813FC292024D9EA00C92C34 /* MultiPeer macOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -297,21 +188,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C813FC0C2024D9A400C92C34 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C813FC202024D9E900C92C34 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C813FC282024D9EA00C92C34 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,14 +208,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C813FC0A2024D9A400C92C34 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C82A45CD2024DE2D00712C7A /* MultiPeerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C813FC1D2024D9E900C92C34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,28 +218,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C813FC262024D9EA00C92C34 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C82A45CE2024DE2E00712C7A /* MultiPeerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C813FC112024D9A400C92C34 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C813FC042024D9A400C92C34 /* MultiPeer iOS */;
-			targetProxy = C813FC102024D9A400C92C34 /* PBXContainerItemProxy */;
-		};
-		C813FC2D2024D9EA00C92C34 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C813FC212024D9E900C92C34 /* MultiPeer macOS */;
-			targetProxy = C813FC2C2024D9EA00C92C34 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C813FBFE2024D97C00C92C34 /* Debug */ = {
@@ -532,131 +380,6 @@
 			};
 			name = Release;
 		};
-		C813FC1B2024D9A400C92C34 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 585SNYAD83;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Tests/Supporting Files/Info-iOS.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wilsonding.$(PRODUCT_NAME)";
-				PRODUCT_NAME = "$(PRODUCT_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		C813FC1C2024D9A400C92C34 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 585SNYAD83;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Tests/Supporting Files/Info-iOS.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wilsonding.$(PRODUCT_NAME)";
-				PRODUCT_NAME = "$(PRODUCT_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		C813FC342024D9EA00C92C34 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -799,130 +522,6 @@
 			};
 			name = Release;
 		};
-		C813FC372024D9EA00C92C34 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 585SNYAD83;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Tests/Supporting Files/Info-macOS.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wilsonding.$(PRODUCT_NAME)";
-				PRODUCT_NAME = "$(PRODUCT_NAME)";
-				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		C813FC382024D9EA00C92C34 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 585SNYAD83;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Tests/Supporting Files/Info-macOS.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wilsonding.$(PRODUCT_NAME)";
-				PRODUCT_NAME = "$(PRODUCT_NAME)";
-				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -944,29 +543,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C813FC1A2024D9A400C92C34 /* Build configuration list for PBXNativeTarget "MultiPeer iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C813FC1B2024D9A400C92C34 /* Debug */,
-				C813FC1C2024D9A400C92C34 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C813FC332024D9EA00C92C34 /* Build configuration list for PBXNativeTarget "MultiPeer macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C813FC342024D9EA00C92C34 /* Debug */,
 				C813FC352024D9EA00C92C34 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C813FC362024D9EA00C92C34 /* Build configuration list for PBXNativeTarget "MultiPeer macOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C813FC372024D9EA00C92C34 /* Debug */,
-				C813FC382024D9EA00C92C34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

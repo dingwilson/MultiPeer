@@ -9,9 +9,9 @@ import Foundation
 import MultipeerConnectivity
 
 // MARK: - Main Class
-class MultiPeer: NSObject {
+public class MultiPeer: NSObject {
 
-    static let instance = MultiPeer()
+    public static let instance = MultiPeer()
 
     // MARK: Properties
 
@@ -19,36 +19,36 @@ class MultiPeer: NSObject {
     weak var delegate: MultiPeerDelegate?
 
     /** Name of MultiPeer session: Up to one hyphen (-) and 15 characters */
-    var serviceType: String!
+    public var serviceType: String!
 
     /** Device's name */
-    var devicePeerID: MCPeerID!
+    public var devicePeerID: MCPeerID!
 
     /** Advertises session */
-    var serviceAdvertiser: MCNearbyServiceAdvertiser!
+    public var serviceAdvertiser: MCNearbyServiceAdvertiser!
 
     /** Browses for sessions */
-    var serviceBrowser: MCNearbyServiceBrowser!
+    public var serviceBrowser: MCNearbyServiceBrowser!
 
     /** Amount of time to spend connecting before timeout */
-    var connectionTimeout = 10.0
+    public var connectionTimeout = 10.0
 
     /** Peers available to connect to */
-    var availablePeers: [Peer] = []
+    public var availablePeers: [Peer] = []
 
     /** Peers connected to */
-    var connectedPeers: [Peer] = []
+    public var connectedPeers: [Peer] = []
 
     /** Names of all connected devices */
-    var connectedDeviceNames: [String] {
+    public var connectedDeviceNames: [String] {
         return session.connectedPeers.map({$0.displayName})
     }
 
     /** Prints out all errors and status updates */
-    var debugMode = false
+    public var debugMode = false
 
     /** Main session object that manages the current connections */
-    lazy var session: MCSession = {
+    public lazy var session: MCSession = {
         let session = MCSession(peer: self.devicePeerID, securityIdentity: nil, encryptionPreference: .none)
         session.delegate = self
         return session
@@ -60,7 +60,7 @@ class MultiPeer: NSObject {
     /// - Parameters:
     ///     - serviceType: String with name of MultiPeer service. Up to one hyphen (-) and 15 characters.
     /// Uses default device name
-    func initialize(serviceType: String) {
+    public func initialize(serviceType: String) {
         #if os(iOS)
             initialize(serviceType: serviceType, deviceName: UIDevice.current.name)
         #elseif os(macOS)
@@ -72,7 +72,7 @@ class MultiPeer: NSObject {
     /// - Parameters:
     ///     - serviceType: String with name of MultiPeer service. Up to one hyphen (-) and 15 characters.
     ///     - deviceName: String containing custom name for device
-    func initialize(serviceType: String, deviceName: String) {
+    public func initialize(serviceType: String, deviceName: String) {
         // Setup device/session properties
         self.serviceType = serviceType
         self.devicePeerID = MCPeerID(displayName: deviceName)
@@ -97,51 +97,51 @@ class MultiPeer: NSObject {
     // MARK: - Methods
 
     /** HOST: Automatically browses and invites all found devices */
-    func startInviting() {
+    public func startInviting() {
         self.serviceBrowser.startBrowsingForPeers()
     }
 
     /** JOIN: Automatically advertises and accepts all invites */
-    func startAccepting() {
+    public func startAccepting() {
         self.serviceAdvertiser.startAdvertisingPeer()
     }
 
     /** HOST and JOIN: Uses both advertising and browsing to connect. */
-    func autoConnect() {
+    public func autoConnect() {
         startInviting()
         startAccepting()
     }
 
     /** Stops the invitation process */
-    func stopInviting() {
+    public func stopInviting() {
         self.serviceBrowser.stopBrowsingForPeers()
     }
 
     /** Stops accepting invites and becomes invisible on the network */
-    func stopAccepting() {
+    public func stopAccepting() {
         self.serviceAdvertiser.stopAdvertisingPeer()
     }
 
     /** Stops all invite/accept services */
-    func stopSearching() {
+    public func stopSearching() {
         stopAccepting()
         stopInviting()
     }
 
     /** Disconnects from the current session and stops all searching activity */
-    func disconnect() {
+    public func disconnect() {
         session.disconnect()
         connectedPeers.removeAll()
         availablePeers.removeAll()
     }
 
     /** Stops all invite/accept services, disconnects from the current session, and stops all searching activity */
-    func end() {
+    public func end() {
         stopSearching()
         disconnect()
     }
 
-    var isConnected: Bool {
+    public var isConnected: Bool {
         return connectedPeers.count > 0
     }
 
@@ -150,7 +150,7 @@ class MultiPeer: NSObject {
     ///     - object: Object (Any) to send to all connected peers.
     ///     - type: Type of data (UInt32) sent
     /// After sending the object, you can use the extension for Data, `convertData()` to convert it back into an object.
-    func send(object: Any, type: UInt32) {
+    public func send(object: Any, type: UInt32) {
         if isConnected {
             let data = NSKeyedArchiver.archivedData(withRootObject: object)
 
@@ -163,7 +163,7 @@ class MultiPeer: NSObject {
     ///     - data: Data (Data) to send to all connected peers.
     ///     - type: Type of data (UInt32) sent
     /// After sending the data, you can use the extension for Data, `convertData()` to convert it back into data.
-    func send(data: Data, type: UInt32) {
+    public func send(data: Data, type: UInt32) {
         if isConnected {
             do {
                 let container: [Any] = [data, type]
@@ -188,7 +188,7 @@ class MultiPeer: NSObject {
 extension MultiPeer: MCNearbyServiceAdvertiserDelegate {
 
     // Received invitation
-    func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
+    public func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
 
         OperationQueue.main.addOperation {
             invitationHandler(true, self.session)
@@ -196,7 +196,7 @@ extension MultiPeer: MCNearbyServiceAdvertiserDelegate {
     }
 
     // Error, could not start advertising
-    func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error) {
+    public func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error) {
         printDebug("Could not start advertising due to error: \(error)")
     }
 
@@ -206,7 +206,7 @@ extension MultiPeer: MCNearbyServiceAdvertiserDelegate {
 extension MultiPeer: MCNearbyServiceBrowserDelegate {
 
     // Found a peer
-    func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String: String]?) {
+    public func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String: String]?) {
         printDebug("Found peer: \(peerID)")
 
         // Update the list and the controller
@@ -216,7 +216,7 @@ extension MultiPeer: MCNearbyServiceBrowserDelegate {
     }
 
     // Lost a peer
-    func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
+    public func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
         printDebug("Lost peer: \(peerID)")
 
         // Update the lost peer
@@ -224,7 +224,7 @@ extension MultiPeer: MCNearbyServiceBrowserDelegate {
     }
 
     // Error, could not start browsing
-    func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {
+    public func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {
         printDebug("Could not start browsing due to error: \(error)")
     }
 
@@ -234,7 +234,7 @@ extension MultiPeer: MCNearbyServiceBrowserDelegate {
 extension MultiPeer: MCSessionDelegate {
 
     // Peer changed state
-    func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
+    public func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         // If the new state is connected, then remove it from the available peers
         // Otherwise, update the state
         if state == .connected {
@@ -255,7 +255,7 @@ extension MultiPeer: MCSessionDelegate {
     }
 
     // Received data
-    func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
+    public func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         printDebug("Received data: \(data.count) bytes")
 
         guard let container = data.convert() as? [Any] else { return }
@@ -269,17 +269,17 @@ extension MultiPeer: MCSessionDelegate {
     }
 
     // Received stream
-    func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
+    public func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
         printDebug("Received stream")
     }
 
     // Started receiving resource
-    func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {
+    public func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {
         printDebug("Started receiving resource with name: \(resourceName)")
     }
 
     // Finished receiving resource
-    func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
+    public func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
         printDebug("Finished receiving resource with name: \(resourceName)")
     }
 
@@ -289,12 +289,12 @@ extension MultiPeer: MCSessionDelegate {
 extension Data {
 
     /** Unarchive data into an object. It will be returned as type `Any`. */
-    func convert() -> Any {
+    public func convert() -> Any {
         return NSKeyedUnarchiver.unarchiveObject(with: self)!
     }
 
     /** Converts an object into Data using NSKeyedArchiver */
-    static func toData(object: Any) -> Data {
+    public static func toData(object: Any) -> Data {
         return NSKeyedArchiver.archivedData(withRootObject: object)
     }
 

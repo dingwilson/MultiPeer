@@ -37,13 +37,6 @@
     },
     {
       "file": "/Volumes/ExtDrive/programming_storage/MultiPeer/Sources/MultiPeer.swift",
-      "line": 93,
-      "symbol": "MultiPeer.deinit",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/ExtDrive/programming_storage/MultiPeer/Sources/MultiPeer.swift",
       "line": 144,
       "symbol": "MultiPeer.isConnected",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -120,38 +113,10 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/ExtDrive/programming_storage/MultiPeer/Sources/MultiPeerDelegate.swift",
-      "line": 10,
-      "symbol": "MultiPeerDelegate",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Volumes/ExtDrive/programming_storage/MultiPeer/Sources/Peer.swift",
       "line": 12,
       "symbol": "Peer",
       "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/ExtDrive/programming_storage/MultiPeer/Sources/Peer.swift",
-      "line": 14,
-      "symbol": "Peer.peerID",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/ExtDrive/programming_storage/MultiPeer/Sources/Peer.swift",
-      "line": 15,
-      "symbol": "Peer.state",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/ExtDrive/programming_storage/MultiPeer/Sources/Peer.swift",
-      "line": 17,
-      "symbol": "Peer.init(peerID:state:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],

@@ -13,7 +13,7 @@
     <a title="MultiPeer  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">MultiPeer Docs</a> (55% documented)</p>
+        <p><a href="index.html">MultiPeer Docs</a> (58% documented)</p>
         <p class="header-right"><a href="https://github.com/dingwilson/MultiPeer"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -34,7 +34,7 @@
                 <a href="Classes/MultiPeer.html">MultiPeer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Peer.html">Peer</a>
+                <a href="Classes.html#/s:9MultiPeer0B0C">Peer</a>
               </li>
             </ul>
           </li>
@@ -43,14 +43,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Extensions/Data.html">Data</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Protocols.html">Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Protocols/MultiPeerDelegate.html">MultiPeerDelegate</a>
               </li>
             </ul>
           </li>
@@ -132,7 +124,7 @@
 <pre class="highlight swift"><code><span class="kt">MultiPeer</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="s">"Hello World!"</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">DataType</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="n">rawValue</span><span class="p">)</span>
 </code></pre>
 
-<p>To receive data, we must conform to the <code><a href="Protocols/MultiPeerDelegate.html">MultiPeerDelegate</a></code> protocol:</p>
+<p>To receive data, we must conform to the <code>MultiPeerDelegate</code> protocol:</p>
 <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">multiPeer</span><span class="p">(</span><span class="n">didReceiveData</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="n">ofType</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="n">type</span> <span class="o">==</span> <span class="kt">DataType</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="nf">rawValue</span> <span class="p">{</span>
         <span class="k">let</span> <span class="nv">string</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="nf">convert</span><span class="p">()</span> <span class="k">as!</span> <span class="kt">String</span>
