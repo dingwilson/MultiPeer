@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "group:../Sources/MultiPeer.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../Sources/MultiPeerDelegate.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../Sources/Peer.swift">
+   </FileRef>
+   <FileRef
+      location = "self:MultiPeer.xcodeproj">
    </FileRef>
 </Workspace>
