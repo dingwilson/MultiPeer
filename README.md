@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Assets/banner.png" title="MultiPeer">
+  <img src="https://github.com/dingwilson/MultiPeer/raw/master/Assets/banner.png" title="MultiPeer">
 </p>
 
 [![Build Status](https://travis-ci.org/dingwilson/MultiPeer.svg?branch=master)](https://travis-ci.org/dingwilson/MultiPeer)
