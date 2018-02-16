@@ -25,10 +25,11 @@ A wrapper for Apple's MultipeerConnectivity framework for offline data transmiss
 
 ## Features
 
+- [x] Supports iOS/macOS
 - [x] Auto Connection
 - [x] Auto Invitations/Advertising
-- [x] Send/Receive data
-- [ ] Send/Receive video buffers
+- [x] Send/Receive data via MultipeerConnectivity Framework
+- [x] Specify data types for easy handling
 
 ## Integration
 
