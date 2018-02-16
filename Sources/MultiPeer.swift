@@ -8,9 +8,10 @@
 import Foundation
 import MultipeerConnectivity
 
-// MARK: - Main Class
+/// Main Class for MultiPeer
 public class MultiPeer: NSObject {
 
+    /// Singleton instance - call via MultiPeer.instance
     public static let instance = MultiPeer()
 
     // MARK: Properties
@@ -19,36 +20,36 @@ public class MultiPeer: NSObject {
     weak var delegate: MultiPeerDelegate?
 
     /** Name of MultiPeer session: Up to one hyphen (-) and 15 characters */
-    public var serviceType: String!
+    var serviceType: String!
 
     /** Device's name */
-    public var devicePeerID: MCPeerID!
+    var devicePeerID: MCPeerID!
 
     /** Advertises session */
-    public var serviceAdvertiser: MCNearbyServiceAdvertiser!
+    var serviceAdvertiser: MCNearbyServiceAdvertiser!
 
     /** Browses for sessions */
-    public var serviceBrowser: MCNearbyServiceBrowser!
+    var serviceBrowser: MCNearbyServiceBrowser!
 
-    /** Amount of time to spend connecting before timeout */
+    /// Amount of time to spend connecting before timeout
     public var connectionTimeout = 10.0
 
-    /** Peers available to connect to */
+    /// Peers available to connect to
     public var availablePeers: [Peer] = []
 
-    /** Peers connected to */
+    /// Peers connected to
     public var connectedPeers: [Peer] = []
 
-    /** Names of all connected devices */
+    /// Names of all connected devices
     public var connectedDeviceNames: [String] {
         return session.connectedPeers.map({$0.displayName})
     }
 
-    /** Prints out all errors and status updates */
+    /// Prints out all errors and status updates
     public var debugMode = false
 
     /** Main session object that manages the current connections */
-    public lazy var session: MCSession = {
+    lazy var session: MCSession = {
         let session = MCSession(peer: self.devicePeerID, securityIdentity: nil, encryptionPreference: .none)
         session.delegate = self
         return session
@@ -96,51 +97,52 @@ public class MultiPeer: NSObject {
 
     // MARK: - Methods
 
-    /** HOST: Automatically browses and invites all found devices */
+    /// HOST: Automatically browses and invites all found devices
     public func startInviting() {
         self.serviceBrowser.startBrowsingForPeers()
     }
 
-    /** JOIN: Automatically advertises and accepts all invites */
+    /// JOIN: Automatically advertises and accepts all invites
     public func startAccepting() {
         self.serviceAdvertiser.startAdvertisingPeer()
     }
 
-    /** HOST and JOIN: Uses both advertising and browsing to connect. */
+    /// HOST and JOIN: Uses both advertising and browsing to connect.
     public func autoConnect() {
         startInviting()
         startAccepting()
     }
 
-    /** Stops the invitation process */
+    /// Stops the invitation process
     public func stopInviting() {
         self.serviceBrowser.stopBrowsingForPeers()
     }
 
-    /** Stops accepting invites and becomes invisible on the network */
+    /// Stops accepting invites and becomes invisible on the network
     public func stopAccepting() {
         self.serviceAdvertiser.stopAdvertisingPeer()
     }
 
-    /** Stops all invite/accept services */
+    /// Stops all invite/accept services
     public func stopSearching() {
         stopAccepting()
         stopInviting()
     }
 
-    /** Disconnects from the current session and stops all searching activity */
+    /// Disconnects from the current session and stops all searching activity
     public func disconnect() {
         session.disconnect()
         connectedPeers.removeAll()
         availablePeers.removeAll()
     }
 
-    /** Stops all invite/accept services, disconnects from the current session, and stops all searching activity */
+    /// Stops all invite/accept services, disconnects from the current session, and stops all searching activity
     public func end() {
         stopSearching()
         disconnect()
     }
 
+    /// Returns true if there are any connected peers
     public var isConnected: Bool {
         return connectedPeers.count > 0
     }
@@ -187,7 +189,7 @@ public class MultiPeer: NSObject {
 // MARK: - Advertiser Delegate
 extension MultiPeer: MCNearbyServiceAdvertiserDelegate {
 
-    // Received invitation
+    /// Received invitation
     public func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
 
         OperationQueue.main.addOperation {
@@ -195,7 +197,7 @@ extension MultiPeer: MCNearbyServiceAdvertiserDelegate {
         }
     }
 
-    // Error, could not start advertising
+    /// Error, could not start advertising
     public func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error) {
         printDebug("Could not start advertising due to error: \(error)")
     }
@@ -205,17 +207,17 @@ extension MultiPeer: MCNearbyServiceAdvertiserDelegate {
 // MARK: - Browser Delegate
 extension MultiPeer: MCNearbyServiceBrowserDelegate {
 
-    // Found a peer
+    /// Found a peer, update the list of available peers
     public func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String: String]?) {
         printDebug("Found peer: \(peerID)")
 
-        // Update the list and the controller
+        // Update the list of available peers
         availablePeers.append(Peer(peerID: peerID, state: .notConnected))
 
         browser.invitePeer(peerID, to: session, withContext: nil, timeout: connectionTimeout)
     }
 
-    // Lost a peer
+    /// Lost a peer, update the list of available peers
     public func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
         printDebug("Lost peer: \(peerID)")
 
@@ -223,7 +225,7 @@ extension MultiPeer: MCNearbyServiceBrowserDelegate {
         availablePeers = availablePeers.filter { $0.peerID != peerID }
     }
 
-    // Error, could not start browsing
+    /// Error, could not start browsing
     public func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {
         printDebug("Could not start browsing due to error: \(error)")
     }
@@ -233,7 +235,7 @@ extension MultiPeer: MCNearbyServiceBrowserDelegate {
 // MARK: - Session Delegate
 extension MultiPeer: MCSessionDelegate {
 
-    // Peer changed state
+    /// Peer changed state, update all connected peers and send new connection list to delegate connectedDevicesChanged
     public func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         // If the new state is connected, then remove it from the available peers
         // Otherwise, update the state
@@ -254,7 +256,7 @@ extension MultiPeer: MCSessionDelegate {
         }
     }
 
-    // Received data
+    /// Received data, update delegate didRecieveData
     public func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         printDebug("Received data: \(data.count) bytes")
 
@@ -268,17 +270,17 @@ extension MultiPeer: MCSessionDelegate {
 
     }
 
-    // Received stream
+    /// Received stream
     public func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
         printDebug("Received stream")
     }
 
-    // Started receiving resource
+    /// Started receiving resource
     public func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {
         printDebug("Started receiving resource with name: \(resourceName)")
     }
 
-    // Finished receiving resource
+    /// Finished receiving resource
     public func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
         printDebug("Finished receiving resource with name: \(resourceName)")
     }
@@ -288,12 +290,12 @@ extension MultiPeer: MCSessionDelegate {
 // MARK: - Data extension for conversion
 extension Data {
 
-    /** Unarchive data into an object. It will be returned as type `Any`. */
+    /// Unarchive data into an object and return as type `Any`.
     public func convert() -> Any {
         return NSKeyedUnarchiver.unarchiveObject(with: self)!
     }
 
-    /** Converts an object into Data using NSKeyedArchiver */
+    /// Converts an object into Data using NSKeyedArchiver
     public static func toData(object: Any) -> Data {
         return NSKeyedArchiver.archivedData(withRootObject: object)
     }

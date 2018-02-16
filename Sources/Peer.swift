@@ -8,7 +8,7 @@
 import Foundation
 import MultipeerConnectivity
 
-// Contains the peerID and state presented to tableview
+/// Class containing peerID and session state
 public class Peer {
 
     var peerID: MCPeerID
