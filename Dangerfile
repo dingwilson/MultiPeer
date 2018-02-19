@@ -8,6 +8,3 @@ end
 
 # Run SwiftLint
 swiftlint.lint_files
-
-# Report any xcodebuild warnings/errors
-xcode_summary.report 'xcodebuild.json'
