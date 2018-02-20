@@ -3,6 +3,10 @@ language: objective-c
 rvm: 2.5.0
 xcode_project: MultiPeer.xcodeproj
 
+branches:
+  only:
+    master
+
 script:
   - set -o pipefail
 
