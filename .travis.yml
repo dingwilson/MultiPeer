@@ -1,7 +1,10 @@
 osx_image: xcode9.2
 language: objective-c
-rvm: 2.5.0
 xcode_project: MultiPeer.xcodeproj
+
+branches:
+  only:
+    master
 
 script:
   - set -o pipefail
@@ -9,3 +12,10 @@ script:
   - swift build
 
   - bundle exec danger --fail-on-errors=true
+
+jobs:
+  include:
+    - stage: jazzy
+      script: ./jazzy.sh
+    - stage: cocoapods
+      script: pod spec lint
