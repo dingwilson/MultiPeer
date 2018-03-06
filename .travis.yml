@@ -11,4 +11,11 @@ script:
 
   - swift build
 
+  - pod spec lint
+
   - bundle exec danger --fail-on-errors=true
+
+jobs:
+  include:
+    - stage: build
+      script: ./jazzy.sh
