@@ -86,6 +86,7 @@
 <li><a href="#swift-package-manager">Swift Package Manager</a></li>
 </ul></li>
 <li><a href="#usage">Usage</a></li>
+<li><a href="#example">Example</a></li>
 <li><a href="#license">License</a></li>
 <li><a href="#authors">Authors</a></li>
 </ol>
@@ -116,16 +117,20 @@
 </code></pre>
 <h2 id='usage' class='heading'>Usage</h2>
 
-<p>To get started, simply initialize MultiPeer with the name of your session (<code>serviceType</code>). There are two modes of connections (advertiser and browser). To utilize both, simply use <code>.autoConnect()</code>.</p>
+<p>To get started, import MultiPeer.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">MultiPeer</span>
+</code></pre>
+
+<p>Then, simply initialize MultiPeer with the name of your session (<code>serviceType</code>). There are two modes of connections (<code>advertiser</code> and <code>browser</code>). To utilize both, simply use <code>.autoConnect()</code>.</p>
 <pre class="highlight swift"><code><span class="kt">MultiPeer</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="nf">initialize</span><span class="p">(</span><span class="nv">serviceType</span><span class="p">:</span> <span class="s">"demo-app"</span><span class="p">)</span>
 <span class="kt">MultiPeer</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="nf">autoConnect</span><span class="p">()</span>
 </code></pre>
 
-<p>Any data transmitted by MultiPeer will always be accompanied by a numerical <q>type</q>, to ensure other peers know what kind of data is being received. You can manage this by creating a <code>UInt32</code> enum, as shown below:</p>
+<p>Any data transmitted by MultiPeer will always be accompanied by a numerical <q>type</q>, to ensure other peers know what kind of data is being received, and how to properly process it. You can manage this by creating a <code>UInt32</code> enum, as shown below:</p>
 <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">DataType</span><span class="p">:</span> <span class="kt">UInt32</span> <span class="p">{</span>
-    <span class="k">case</span> <span class="n">string</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">case</span> <span class="n">image</span> <span class="o">=</span> <span class="mi">2</span>
-    <span class="c1">// ...</span>
+  <span class="k">case</span> <span class="n">string</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="k">case</span> <span class="n">image</span> <span class="o">=</span> <span class="mi">2</span>
+  <span class="c1">// ...</span>
 <span class="p">}</span>
 </code></pre>
 
@@ -135,19 +140,34 @@
 
 <p>To receive data, we must conform to the <code><a href="Protocols/MultiPeerDelegate.html">MultiPeerDelegate</a></code> protocol:</p>
 <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">multiPeer</span><span class="p">(</span><span class="n">didReceiveData</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="n">ofType</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="n">type</span> <span class="o">==</span> <span class="kt">DataType</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="n">rawValue</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">string</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="nf">convert</span><span class="p">()</span> <span class="k">as!</span> <span class="kt">String</span>
-        <span class="c1">// do something with the received string</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">type</span> <span class="o">==</span> <span class="kt">DataType</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">rawValue</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
-        <span class="c1">// do something with the received UIImage</span>
-    <span class="p">}</span>
+  <span class="k">switch</span> <span class="n">type</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="kt">DataType</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="nv">rawValue</span><span class="p">:</span>
+      <span class="k">let</span> <span class="nv">string</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="nf">convert</span><span class="p">()</span> <span class="k">as!</span> <span class="kt">String</span>
+      <span class="c1">// do something with the received string</span>
+      <span class="k">break</span><span class="p">;</span>
+
+    <span class="k">case</span> <span class="kt">DataType</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="nv">rawValue</span><span class="p">:</span>
+      <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
+      <span class="c1">// do something with the received UIImage</span>
+      <span class="k">break</span><span class="p">;</span>
+
+    <span class="k">default</span><span class="p">:</span>
+      <span class="k">break</span><span class="p">;</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">multiPeer</span><span class="p">(</span><span class="n">connectedDevicesChanged</span> <span class="nv">devices</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span> <span class="p">{}</span>
+<span class="kd">func</span> <span class="nf">multiPeer</span><span class="p">(</span><span class="n">connectedDevicesChanged</span> <span class="nv">devices</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Finally, ensure that you set the MultiPeer delegate.</p>
+<pre class="highlight swift"><code><span class="kt">MultiPeer</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
 </code></pre>
 
 <p>Congratulations! You have successfully sent data using MultiPeer! For more detailed information (including details of other functions), please see the <a href="http://wilsonding.com/MultiPeer">docs</a>.</p>
+<h2 id='example' class='heading'>Example</h2>
+
+<p>For an example app using MultiPeer, checkout <a href="https://github.com/dingwilson/MultiPeer_Sample">MultiPeer_Sample</a>.</p>
 <h2 id='license' class='heading'>License</h2>
 
 <p><code><a href="Classes/MultiPeer.html">MultiPeer</a></code> is released under an <a href="http://opensource.org/licenses/MIT">MIT License</a>. See <a href="LICENSE">LICENSE</a> for details.</p>
