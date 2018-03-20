@@ -101,9 +101,9 @@ func multiPeer(didReceiveData data: Data, ofType type: UInt32) {
       // do something with the received UIImage
       break;
       		
-		default:
-			break;
-    }
+    default:
+      break;
+  }
 }
 
 func multiPeer(connectedDevicesChanged devices: [String]) {
