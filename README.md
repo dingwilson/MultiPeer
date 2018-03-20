@@ -20,8 +20,9 @@ A wrapper for Apple's MultipeerConnectivity framework for offline data transmiss
     - [Carthage](#carthage)
     - [Swift Package Manager](#swift-package-manager)
 3. [Usage](#usage)
-4. [License](#license)
-5. [Authors](#authors)
+4. [Example](#example)
+5. [License](#license)
+6. [Authors](#authors)
 
 ## Features
 
@@ -56,20 +57,26 @@ For [SPM](https://swift.org/package-manager/), add the following to your package
 
 ## Usage
 
-To get started, simply initialize MultiPeer with the name of your session (`serviceType`). There are two modes of connections (advertiser and browser). To utilize both, simply use `.autoConnect()`.
+To get started, import MultiPeer.
+
+```swift
+import MultiPeer
+```
+
+Then, simply initialize MultiPeer with the name of your session (`serviceType`). There are two modes of connections (`advertiser` and `browser`). To utilize both, simply use `.autoConnect()`.
 
 ```swift
 MultiPeer.instance.initialize(serviceType: "demo-app")
 MultiPeer.instance.autoConnect()
 ```
 
-Any data transmitted by MultiPeer will always be accompanied by a numerical "type", to ensure other peers know what kind of data is being received. You can manage this by creating a `UInt32` enum, as shown below:
+Any data transmitted by MultiPeer will always be accompanied by a numerical "type", to ensure other peers know what kind of data is being received, and how to properly process it. You can manage this by creating a `UInt32` enum, as shown below:
 
 ```swift
 enum DataType: UInt32 {
-    case string = 1
-    case image = 2
-    // ...
+  case string = 1
+  case image = 2
+  // ...
 }
 ```
 
@@ -83,19 +90,36 @@ To receive data, we must conform to the `MultiPeerDelegate` protocol:
 
 ```swift
 func multiPeer(didReceiveData data: Data, ofType type: UInt32) {
-    if type == DataType.string.rawValue {
-        let string = data.convert() as! String
-        // do something with the received string
-    } else if type == DataType.image.rawValue {
-        let image = UIImage(data: data)
-        // do something with the received UIImage
-    }
+  switch type {
+    case DataType.string.rawValue:
+      let string = data.convert() as! String
+      // do something with the received string
+      break;
+      		
+    case DataType.image.rawValue:
+      let image = UIImage(data: data)
+      // do something with the received UIImage
+      break;
+      		
+    default:
+      break;
+  }
 }
 
-func multiPeer(connectedDevicesChanged devices: [String]) {}
+func multiPeer(connectedDevicesChanged devices: [String]) {
+}
+```
+
+Finally, ensure that you set the MultiPeer delegate.
+
+```swift
+MultiPeer.instance.delegate = self
 ```
 
 Congratulations! You have successfully sent data using MultiPeer! For more detailed information (including details of other functions), please see the [docs](http://wilsonding.com/MultiPeer).
+
+## Example
+For an example app using MultiPeer, checkout [MultiPeer_Sample](https://github.com/dingwilson/MultiPeer_Sample).
 
 ## License
 `MultiPeer` is released under an [MIT License](http://opensource.org/licenses/MIT). See [LICENSE](LICENSE) for details.
