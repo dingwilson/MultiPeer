@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Data Extension Reference</title>
+    <title>MultiPeerDelegate Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Extension/Data" class="dashAnchor"></a>
-    <a title="Data Extension Reference"></a>
+    <a name="//apple_ref/swift/Protocol/MultiPeerDelegate" class="dashAnchor"></a>
+    <a title="MultiPeerDelegate Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">MultiPeer Docs</a> (100% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">MultiPeer Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Data Extension Reference
+        MultiPeerDelegate Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -60,8 +60,22 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Data</h1>
-            
+            <h1>MultiPeerDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">MultiPeerDelegate</span><span class="p">:</span> <span class="kd">class</span></code></pre>
+
+                </div>
+              </div>
+            <p>MultiPeerDelegate</p>
+
+<ul>
+<li>Delegate for MultiPeer. Conform to this interface to recieve data and be notified when connection/disconnection events occur</li>
+</ul>
+
+<p>multiPeer(didRecieveData: Data, ofType: UInt32)
+multiPeer(connectedDevicesChanged: [String])</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -69,9 +83,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10Foundation4DataV9MultiPeerE7convertypyF"></a>
-                    <a name="//apple_ref/swift/Method/convert()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation4DataV9MultiPeerE7convertypyF">convert()</a>
+                    <a name="/s:9MultiPeer0aB8DelegateP05multiB0y10Foundation4DataV010didReceiveF0_s6UInt32V6ofTypetF"></a>
+                    <a name="//apple_ref/swift/Method/multiPeer(didReceiveData:ofType:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeer0aB8DelegateP05multiB0y10Foundation4DataV010didReceiveF0_s6UInt32V6ofTypetF">multiPeer(didReceiveData:ofType:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -79,14 +93,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Unarchive data into an object and return as type <code>Any</code>.</p>
+                        <p>didReceiveData: delegate runs on receiving data from another peer</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">convert</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Any</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">multiPeer</span><span class="p">(</span><span class="n">didReceiveData</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="n">ofType</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -96,9 +110,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10Foundation4DataV9MultiPeerE02toB0ACyp6object_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/toData(object:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation4DataV9MultiPeerE02toB0ACyp6object_tFZ">toData(object:)</a>
+                    <a name="/s:9MultiPeer0aB8DelegateP05multiB0ySaySSG23connectedDevicesChanged_tF"></a>
+                    <a name="//apple_ref/swift/Method/multiPeer(connectedDevicesChanged:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeer0aB8DelegateP05multiB0ySaySSG23connectedDevicesChanged_tF">multiPeer(connectedDevicesChanged:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -106,14 +120,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Converts an object into Data using NSKeyedArchiver</p>
+                        <p>connectedDevicesChanged: delegate runs on connection/disconnection event in session</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">toData</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">multiPeer</span><span class="p">(</span><span class="n">connectedDevicesChanged</span> <span class="nv">devices</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>

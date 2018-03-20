@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Extensions  Reference</title>
+    <title>Protocols  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,7 +10,7 @@
     
   </head>
   <body>
-    <a title="Extensions  Reference"></a>
+    <a title="Protocols  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html">MultiPeer Docs</a> (100% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="index.html">MultiPeer Reference</a>
         <img id="carat" src="img/carat.png" />
-        Extensions  Reference
+        Protocols  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -59,26 +59,19 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Extensions</h1>
-            <p>The following extensions are available globally.</p>
+            <h1>Protocols</h1>
+            <p>The following protocols are available globally.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Data%20extension%20for%20conversion"></a>
-                <a name="//apple_ref/swift/Section/Data extension for conversion" class="dashAnchor"></a>
-                <a href="#/Data%20extension%20for%20conversion">
-                  <h3 class="section-name">Data extension for conversion</h3>
-                </a>
-              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10Foundation4DataV"></a>
-                    <a name="//apple_ref/swift/Extension/Data" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation4DataV">Data</a>
+                    <a name="/s:9MultiPeer0aB8DelegateP"></a>
+                    <a name="//apple_ref/swift/Protocol/MultiPeerDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeer0aB8DelegateP">MultiPeerDelegate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -86,8 +79,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
-                        <a href="Extensions/Data.html" class="slightly-smaller">See more</a>
+                        <p>MultiPeerDelegate</p>
+
+<ul>
+<li>Delegate for MultiPeer. Conform to this interface to recieve data and be notified when connection/disconnection events occur</li>
+</ul>
+
+<p>multiPeer(didRecieveData: Data, ofType: UInt32)
+multiPeer(connectedDevicesChanged: [String])</p>
+
+                        <a href="Protocols/MultiPeerDelegate.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">MultiPeerDelegate</span><span class="p">:</span> <span class="kd">class</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
