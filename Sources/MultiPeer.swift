@@ -17,7 +17,7 @@ public class MultiPeer: NSObject {
     // MARK: Properties
 
     /** Conforms to MultiPeerDelegate: Handles receiving data and changes in connections */
-    weak var delegate: MultiPeerDelegate?
+    public weak var delegate: MultiPeerDelegate?
 
     /** Name of MultiPeer session: Up to one hyphen (-) and 15 characters */
     var serviceType: String!
