@@ -74,9 +74,9 @@ Any data transmitted by MultiPeer will always be accompanied by a numerical "typ
 
 ```swift
 enum DataType: UInt32 {
-    case string = 1
-    case image = 2
-    // ...
+  case string = 1
+  case image = 2
+  // ...
 }
 ```
 
@@ -90,9 +90,9 @@ To receive data, we must conform to the `MultiPeerDelegate` protocol:
 
 ```swift
 func multiPeer(didReceiveData data: Data, ofType type: UInt32) {
-	switch type {
-		case DataType.string.rawValue:
-			let string = data.convert() as! String
+  switch type {
+    case DataType.string.rawValue:
+		  let string = data.convert() as! String
       // do something with the received string
       break;
       		
