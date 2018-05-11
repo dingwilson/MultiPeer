@@ -63,7 +63,7 @@
             <h1>MultiPeer</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MultiPeer</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MultiPeer</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
@@ -93,7 +93,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">instance</span> <span class="o">=</span> <span class="kt">MultiPeer</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">instance</span><span class="p">:</span> <span class="kt">MultiPeer</span></code></pre>
 
                         </div>
                       </div>
@@ -158,7 +158,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">connectionTimeout</span> <span class="o">=</span> <span class="mf">10.0</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">connectionTimeout</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
 
                         </div>
                       </div>
@@ -185,7 +185,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">availablePeers</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes.html#/s:9MultiPeer0B0C">Peer</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">availablePeers</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes.html#/s:9MultiPeer0B0C">Peer</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -212,7 +212,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">connectedPeers</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes.html#/s:9MultiPeer0B0C">Peer</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">connectedPeers</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes.html#/s:9MultiPeer0B0C">Peer</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -239,7 +239,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">connectedDeviceNames</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">connectedDeviceNames</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -266,7 +266,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">debugMode</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">debugMode</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -636,7 +636,7 @@ Uses default device name</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isConnected</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isConnected</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -764,6 +764,13 @@ After sending the data, you can use the extension for Data, <code>convertData()<
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Advertiser%20Delegate"></a>
+                <a name="//apple_ref/swift/Section/Advertiser Delegate" class="dashAnchor"></a>
+                <a href="#/Advertiser%20Delegate">
+                  <h3 class="section-name">Advertiser Delegate</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -822,6 +829,13 @@ After sending the data, you can use the extension for Data, <code>convertData()<
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Browser%20Delegate"></a>
+                <a name="//apple_ref/swift/Section/Browser Delegate" class="dashAnchor"></a>
+                <a href="#/Browser%20Delegate">
+                  <h3 class="section-name">Browser Delegate</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -843,7 +857,7 @@ After sending the data, you can use the extension for Data, <code>convertData()<
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">browser</span><span class="p">(</span><span class="n">_</span> <span class="nv">browser</span><span class="p">:</span> <span class="kt">MCNearbyServiceBrowser</span><span class="p">,</span> <span class="n">foundPeer</span> <span class="nv">peerID</span><span class="p">:</span> <span class="kt">MCPeerID</span><span class="p">,</span> <span class="n">withDiscoveryInfo</span> <span class="nv">info</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">browser</span><span class="p">(</span><span class="n">_</span> <span class="nv">browser</span><span class="p">:</span> <span class="kt">MCNearbyServiceBrowser</span><span class="p">,</span> <span class="n">foundPeer</span> <span class="nv">peerID</span><span class="p">:</span> <span class="kt">MCPeerID</span><span class="p">,</span> <span class="n">withDiscoveryInfo</span> <span class="nv">info</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?)</span></code></pre>
 
                         </div>
                       </div>
@@ -907,6 +921,13 @@ After sending the data, you can use the extension for Data, <code>convertData()<
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Session%20Delegate"></a>
+                <a name="//apple_ref/swift/Section/Session Delegate" class="dashAnchor"></a>
+                <a href="#/Session%20Delegate">
+                  <h3 class="section-name">Session Delegate</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -1048,8 +1069,8 @@ After sending the data, you can use the extension for Data, <code>convertData()<
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/dingwilson/MultiPeer" target="_blank" rel="external">Wilson Ding and Quan Vo</a>. All rights reserved. (Last updated: 2018-03-20)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/dingwilson/MultiPeer" target="_blank" rel="external">Wilson Ding and Quan Vo</a>. All rights reserved. (Last updated: 2018-05-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
