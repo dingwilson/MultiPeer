@@ -6,6 +6,9 @@ branches:
   only:
     master
 
+before_install:
+  - git clone https://github.com/dingwilson/devops-ci.git
+
 script:
   - set -o pipefail
 
@@ -15,7 +18,6 @@ script:
 
   - bundle exec danger --fail-on-errors=true
 
-jobs:
-  include:
-    - stage: build
-      script: ./jazzy.sh
+after_success:
+  - export repo=dingwilson/MultiPeer
+  - source ./devops-ci/gen_jazzy_docs.sh
