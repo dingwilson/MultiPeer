@@ -19,5 +19,4 @@ script:
   - bundle exec danger --fail-on-errors=true
 
 after_success:
-  - export repo=dingwilson/MultiPeer
   - source ./devops-ci/gen_jazzy_docs.sh
