@@ -94,15 +94,15 @@ func multiPeer(didReceiveData data: Data, ofType type: UInt32) {
     case DataType.string.rawValue:
       let string = data.convert() as! String
       // do something with the received string
-      break;
+      break
       		
     case DataType.image.rawValue:
       let image = UIImage(data: data)
       // do something with the received UIImage
-      break;
+      break
       		
     default:
-      break;
+      break
   }
 }
 
