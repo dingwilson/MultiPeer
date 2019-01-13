@@ -5,8 +5,6 @@
 [![Build Status](https://travis-ci.org/dingwilson/MultiPeer.svg?branch=master)](https://travis-ci.org/dingwilson/MultiPeer)
 [![CocoaPods Version Status](https://img.shields.io/cocoapods/v/MultiPeer.svg)](https://cocoapods.org/pods/MultiPeer)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CocoaPods](https://img.shields.io/cocoapods/dt/MultiPeer.svg)](https://cocoapods.org/pods/MultiPeer)
-[![CocoaPods](https://img.shields.io/cocoapods/dm/MultiPeer.svg)](https://cocoapods.org/pods/MultiPeer)
 ![iOS](https://img.shields.io/badge/os-iOS-green.svg?style=flat)
 ![Mac](https://img.shields.io/badge/os-Mac-green.svg?style=flat)
 [![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)](https://swift.org)
@@ -127,6 +125,5 @@ For an example app using MultiPeer, checkout [MultiPeer_Sample](https://github.c
 ## Authors
 
 - [Wilson Ding](https://github.com/dingwilson)
-- [Quan Vo](https://github.com/quanvo87)
 
 Project heavily inspired by [Apple-Signal](https://github.com/kirankunigiri/Apple-Signal).
