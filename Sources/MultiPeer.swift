@@ -66,6 +66,8 @@ public class MultiPeer: NSObject {
             initialize(serviceType: serviceType, deviceName: UIDevice.current.name)
         #elseif os(macOS)
             initialize(serviceType: serviceType, deviceName: Host.current().name!)
+        #elseif os(tvOS)
+            initialize(serviceType: serviceType, deviceName: UIDevice.current.name)
         #endif
     }
 
