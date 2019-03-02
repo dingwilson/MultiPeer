@@ -6,7 +6,8 @@
 [![CocoaPods Version Status](https://img.shields.io/cocoapods/v/MultiPeer.svg)](https://cocoapods.org/pods/MultiPeer)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![iOS](https://img.shields.io/badge/os-iOS-green.svg?style=flat)
-![Mac](https://img.shields.io/badge/os-Mac-green.svg?style=flat)
+![MacOS](https://img.shields.io/badge/os-MacOS-green.svg?style=flat)
+![tvOS](https://img.shields.io/badge/os-tvOS-green.svg?style=flat)
 [![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)](https://swift.org)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
@@ -24,7 +25,7 @@ A wrapper for Apple's MultipeerConnectivity framework for offline data transmiss
 
 ## Features
 
-- [x] Supports iOS/macOS
+- [x] Supports iOS/macOS/tvOS
 - [x] Auto Connection
 - [x] Auto Invitations/Advertising
 - [x] Send/Receive data via MultipeerConnectivity Framework
