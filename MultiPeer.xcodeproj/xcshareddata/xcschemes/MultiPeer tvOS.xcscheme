@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0920"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C813FC042024D9A400C92C34"
-               BuildableName = "MultiPeer.framework"
-               BlueprintName = "MultiPeer iOS"
+               BlueprintIdentifier = "DB3BBA2D222A988F0057D881"
+               BuildableName = "MultiPeer_tvOS.framework"
+               BlueprintName = "MultiPeer tvOS"
                ReferencedContainer = "container:MultiPeer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C813FC0D2024D9A400C92C34"
-               BuildableName = "MultiPeer.xctest"
-               BlueprintName = "MultiPeer iOSTests"
-               ReferencedContainer = "container:MultiPeer.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C813FC042024D9A400C92C34"
-            BuildableName = "MultiPeer.framework"
-            BlueprintName = "MultiPeer iOS"
-            ReferencedContainer = "container:MultiPeer.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C813FC042024D9A400C92C34"
-            BuildableName = "MultiPeer.framework"
-            BlueprintName = "MultiPeer iOS"
+            BlueprintIdentifier = "DB3BBA2D222A988F0057D881"
+            BuildableName = "MultiPeer_tvOS.framework"
+            BlueprintName = "MultiPeer tvOS"
             ReferencedContainer = "container:MultiPeer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C813FC042024D9A400C92C34"
-            BuildableName = "MultiPeer.framework"
-            BlueprintName = "MultiPeer iOS"
+            BlueprintIdentifier = "DB3BBA2D222A988F0057D881"
+            BuildableName = "MultiPeer_tvOS.framework"
+            BlueprintName = "MultiPeer tvOS"
             ReferencedContainer = "container:MultiPeer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
