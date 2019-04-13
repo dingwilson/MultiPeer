@@ -5,7 +5,7 @@
 //  Created by Martynets Ruslan on 3/2/19.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for MultiPeer_tvOS.
 FOUNDATION_EXPORT double MultiPeer_tvOSVersionNumber;
