@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.org/dingwilson/MultiPeer.svg?branch=master)](https://travis-ci.org/dingwilson/MultiPeer)
 [![CocoaPods Version Status](https://img.shields.io/cocoapods/v/MultiPeer.svg)](https://cocoapods.org/pods/MultiPeer)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![doccov](https://wilsonding.com/MultiPeer/badge.svg)](https://wilsonding.com/MultiPeer)
 ![iOS](https://img.shields.io/badge/os-iOS-green.svg?style=flat)
 ![MacOS](https://img.shields.io/badge/os-MacOS-green.svg?style=flat)
 ![tvOS](https://img.shields.io/badge/os-tvOS-green.svg?style=flat)
