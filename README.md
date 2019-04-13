@@ -5,10 +5,11 @@
 [![Build Status](https://travis-ci.org/dingwilson/MultiPeer.svg?branch=master)](https://travis-ci.org/dingwilson/MultiPeer)
 [![CocoaPods Version Status](https://img.shields.io/cocoapods/v/MultiPeer.svg)](https://cocoapods.org/pods/MultiPeer)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![doccov](https://wilsonding.com/MultiPeer/badge.svg)](https://wilsonding.com/MultiPeer)
 ![iOS](https://img.shields.io/badge/os-iOS-green.svg?style=flat)
 ![MacOS](https://img.shields.io/badge/os-MacOS-green.svg?style=flat)
 ![tvOS](https://img.shields.io/badge/os-tvOS-green.svg?style=flat)
-[![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)](https://swift.org)
+[![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
 A wrapper for Apple's MultipeerConnectivity framework for offline data transmission between Apple devices. This framework makes it easy to automatically connect to multiple nearby devices and share information using either bluetooth or wifi radios.
