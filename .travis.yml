@@ -12,7 +12,7 @@ before_install:
 script:
   - set -o pipefail
 
-  - swift build
+  - swift build -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.11"
 
   - pod spec lint
 
