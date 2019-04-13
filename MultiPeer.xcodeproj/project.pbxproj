@@ -33,7 +33,7 @@
 		C82A45C42024DD2E00712C7A /* Peer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peer.swift; sourceTree = "<group>"; };
 		DB3BBA2E222A988F0057D881 /* MultiPeer_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiPeer_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3BBA30222A988F0057D881 /* MultiPeer_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiPeer_tvOS.h; sourceTree = "<group>"; };
-		DB3BBA31222A988F0057D881 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB3BBA31222A988F0057D881 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				C813FC3C2024DA4400C92C34 /* Sources */,
-				DB3BBA2F222A988F0057D881 /* MultiPeer tvOS */,
 				C813FC062024D9A400C92C34 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +86,7 @@
 				C82A45C32024DD2E00712C7A /* MultiPeerDelegate.swift */,
 				C82A45C42024DD2E00712C7A /* Peer.swift */,
 				C813FC082024D9A400C92C34 /* MultiPeer.h */,
+				DB3BBA30222A988F0057D881 /* MultiPeer_tvOS.h */,
 				C813FC3D2024DA5A00C92C34 /* Supporting Files */,
 			);
 			path = Sources;
@@ -97,17 +97,9 @@
 			children = (
 				C813FC432024DAAA00C92C34 /* Info-iOS.plist */,
 				C813FC422024DAAA00C92C34 /* Info-macOS.plist */,
+				DB3BBA31222A988F0057D881 /* Info-tvOS.plist */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		DB3BBA2F222A988F0057D881 /* MultiPeer tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				DB3BBA30222A988F0057D881 /* MultiPeer_tvOS.h */,
-				DB3BBA31222A988F0057D881 /* Info.plist */,
-			);
-			path = "MultiPeer tvOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -654,7 +646,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "MultiPeer tvOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -725,7 +717,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "MultiPeer tvOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
