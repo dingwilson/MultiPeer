@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Wilson Ding" => "hello@wilsonding.com" }
   s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.10'
+  s.osx.deployment_target = '10.11'
   s.tvos.deployment_target = '9.10'
   s.source       = { :git => "https://github.com/dingwilson/MultiPeer.git", :tag => s.version }
   s.source_files  = "Sources/*.{h,m,swift}"
