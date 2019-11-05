@@ -216,7 +216,11 @@ extension MultiPeer: MCNearbyServiceBrowserDelegate {
         // Update the list of available peers
         availablePeers.append(Peer(peerID: peerID, state: .notConnected))
 
-        browser.invitePeer(peerID, to: session, withContext: nil, timeout: connectionTimeout)
+        // Ensure only one device send invitation
+        // https://stackoverflow.com/questions/19469984/reconnecting-to-disconnected-peers
+        if devicePeerID.displayName > peerID.displayName {
+            browser.invitePeer(peerID, to: session, withContext: nil, timeout: connectionTimeout)
+        }
     }
 
     /// Lost a peer, update the list of available peers
