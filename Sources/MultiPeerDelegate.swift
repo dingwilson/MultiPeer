@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MultipeerConnectivity
 
 /// MultiPeerDelegate
 ///
@@ -21,5 +22,7 @@ public protocol MultiPeerDelegate: class {
 
     /// connectedDevicesChanged: delegate runs on connection/disconnection event in session
     func multiPeer(connectedDevicesChanged devices: [String])
+    
+    func multiPeer(shouldInvitePeerDidFound peerID: MCPeerID, browser: MCNearbyServiceBrowser, withDiscoveryInfo info: [String: String]?) -> Bool
 
 }

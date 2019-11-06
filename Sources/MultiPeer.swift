@@ -178,6 +178,10 @@ public class MultiPeer: NSObject {
             }
         }
     }
+    
+    public func invite(peer: Peer, context: Data? = nil) {
+        self.serviceBrowser.invitePeer(peer.peerID, to: session, withContext: context, timeout: connectionTimeout)
+    }
 
     /** Prints only if in debug mode */
     fileprivate func printDebug(_ string: String) {
@@ -213,10 +217,13 @@ extension MultiPeer: MCNearbyServiceBrowserDelegate {
     public func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String: String]?) {
         printDebug("Found peer: \(peerID)")
 
+        let peer = Peer(peerID: peerID, state: .notConnected)
         // Update the list of available peers
-        availablePeers.append(Peer(peerID: peerID, state: .notConnected))
+        availablePeers.append(peer)
 
-        browser.invitePeer(peerID, to: session, withContext: nil, timeout: connectionTimeout)
+        if self.delegate?.multiPeer(shouldInvitePeerDidFound: peerID, browser: browser, withDiscoveryInfo: info) ?? true {
+            invite(peer: peer)
+        }
     }
 
     /// Lost a peer, update the list of available peers
