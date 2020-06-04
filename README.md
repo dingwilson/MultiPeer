@@ -110,11 +110,16 @@ func multiPeer(connectedDevicesChanged devices: [String]) {
 }
 ```
 
-Finally, ensure that you set the MultiPeer delegate.
+Ensure that you set the MultiPeer delegate.
 
 ```swift
 MultiPeer.instance.delegate = self
 ```
+
+Finally you'll need to enable incoming / outgoing connections in your entitilements.
+<p align="left">
+  <img src="https://github.com/dingwilson/MultiPeer/raw/master/Assets/entitlements.png" title="Enabling entitlements">
+</p>
 
 Congratulations! You have successfully sent data using MultiPeer! For more detailed information (including details of other functions), please see the [docs](http://wilsonding.com/MultiPeer).
 
