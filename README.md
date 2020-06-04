@@ -116,7 +116,7 @@ Ensure that you set the MultiPeer delegate.
 MultiPeer.instance.delegate = self
 ```
 
-Finally you'll need to enable incoming / outgoing connections in your entitilements.
+Finally you'll need to enable incoming / outgoing connections in your entitlements.
 <p align="left">
   <img src="https://github.com/dingwilson/MultiPeer/raw/master/Assets/entitlements.png" title="Enabling entitlements">
 </p>
