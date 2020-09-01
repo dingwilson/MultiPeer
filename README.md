@@ -89,7 +89,7 @@ MultiPeer.instance.send(object: "Hello World!", type: DataType.string.rawValue)
 To receive data, we must conform to the `MultiPeerDelegate` protocol:
 
 ```swift
-func multiPeer(didReceiveData data: Data, ofType type: UInt32) {
+func multiPeer(didReceiveData data: Data, ofType type: UInt32, from peerID: MCPeerID) {
   switch type {
     case DataType.string.rawValue:
       let string = data.convert() as! String
