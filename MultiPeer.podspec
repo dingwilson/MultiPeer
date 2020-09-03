@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MultiPeer"
-  s.version      = "0.1.0"
+  s.version      = "0.2.0"
   s.summary      = "MultiPeer makes it easy to automatically connect to multiple nearby devices and share information using MultipeerConnectivity."
   s.description  = "MultiPeer is a wrapper for the MultipeerConnectivity framework for offline data transmission between devices. This framework makes it easy to automatically connect to multiple nearby devices and share information using either bluetooth or wifi radios."
   s.homepage     = "https://github.com/dingwilson/MultiPeer"
