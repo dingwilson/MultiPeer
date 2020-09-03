@@ -1,6 +1,12 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/travis/build/dingwilson/MultiPeer/Sources/MultiPeerDelegate.swift",
+      "line": 19,
+      "symbol": "MultiPeerDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/travis/build/dingwilson/MultiPeer"
 }

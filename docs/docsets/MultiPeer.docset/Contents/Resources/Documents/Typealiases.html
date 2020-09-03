@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Classes  Reference</title>
+    <title>Type Aliases  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Section/Classes" class="dashAnchor"></a>
-    <a title="Classes  Reference"></a>
+    <a name="//apple_ref/swift/Section/Type Aliases" class="dashAnchor"></a>
+    <a title="Type Aliases  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html">MultiPeer Docs</a> (97% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="index.html">MultiPeer Reference</a>
         <img id="carat" src="img/carat.png" />
-        Classes  Reference
+        Type Aliases  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -68,8 +68,8 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Classes</h1>
-            <p>The following classes are available globally.</p>
+            <h1>Type Aliases</h1>
+            <p>The following type aliases are available globally.</p>
 
           </section>
           <section class="section task-group-section">
@@ -78,9 +78,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@MultiPeer@objc(cs)MultiPeer"></a>
-                    <a name="//apple_ref/swift/Class/MultiPeer" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@MultiPeer@objc(cs)MultiPeer">MultiPeer</a>
+                    <a name="/s:9MultiPeer8MCPeerIDa"></a>
+                    <a name="//apple_ref/swift/Alias/MCPeerID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MultiPeer8MCPeerIDa">MCPeerID</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -88,45 +88,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Main Class for MultiPeer</p>
+                        <p>MultiPeerDelegate</p>
 
-                        <a href="Classes/MultiPeer.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MultiPeer</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">MultiPeer</span><span class="p">:</span> <span class="kt">MCNearbyServiceAdvertiserDelegate</span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">MultiPeer</span><span class="p">:</span> <span class="kt">MCNearbyServiceBrowserDelegate</span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">MultiPeer</span><span class="p">:</span> <span class="kt">MCSessionDelegate</span></code></pre>
+<ul>
+<li>Delegate for MultiPeer. Conform to this interface to recieve data and be notified when connection/disconnection events occur</li>
+</ul>
 
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MultiPeer0B0C"></a>
-                    <a name="//apple_ref/swift/Class/Peer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MultiPeer0B0C">Peer</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Class containing peerID and session state</p>
+<p>multiPeer(didRecieveData: Data, ofType: UInt32)
+multiPeer(connectedDevicesChanged: [String])</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Peer</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">MCPeerID</span> <span class="o">=</span> <span class="kt">MultipeerConnectivity</span><span class="o">.</span><span class="kt">MCPeerID</span></code></pre>
 
                         </div>
                       </div>
